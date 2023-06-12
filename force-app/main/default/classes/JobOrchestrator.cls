@@ -20,7 +20,7 @@ public class JobOrchestrator implements Schedulable {
             Integer numberOfJobsInTheQueue = getNumberOfJobsInTheQueue(); 
             //yes, line above is SOQL in FOR loop
             //but we want to receive up-to-date number each time we run new batch
-            //and we know that jobRequests.size() is limited to 20
+            //and we know that jobRequests.size() is limited to 50
             
             if(numberOfJobsInTheQueue < JOBS_IN_QUEUE_THRESHOLD){
                 executeJob(jobRequest);
