@@ -48,7 +48,7 @@ public class JobOrchestrator implements Schedulable {
             jobRequest.Job_Status__c = 'Processing';
         } catch (Exception e){
             jobRequest.Job_Status__c = 'Failed to run';
-        	jobRequest.Status_Info__c = e.getLineNumber() + ':' + e.getStackTraceString();
+            jobRequest.Status_Info__c = e.getLineNumber() + ':' + e.getStackTraceString();
         }               
     }
     
